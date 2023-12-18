@@ -8,17 +8,29 @@
 
 /* Begin PBXBuildFile section */
 		EA3B0A2A2B2F24EF00B8BB21 /* ObjectRecognitionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3B0A292B2F24EF00B8BB21 /* ObjectRecognitionApp.swift */; };
-		EA3B0A2C2B2F24EF00B8BB21 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3B0A2B2B2F24EF00B8BB21 /* ContentView.swift */; };
 		EA3B0A2E2B2F24F100B8BB21 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA3B0A2D2B2F24F100B8BB21 /* Assets.xcassets */; };
 		EA3B0A312B2F24F100B8BB21 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA3B0A302B2F24F100B8BB21 /* Preview Assets.xcassets */; };
+		EA3B0A382B2F255700B8BB21 /* MobileNetV2.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = EA3B0A372B2F255700B8BB21 /* MobileNetV2.mlmodel */; };
+		EA3B0A3B2B2F38D600B8BB21 /* RecognitionResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3B0A3A2B2F38D600B8BB21 /* RecognitionResult.swift */; };
+		EA3B0A3E2B2F38F300B8BB21 /* RecognitionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3B0A3D2B2F38F300B8BB21 /* RecognitionViewModel.swift */; };
+		EA3B0A412B2F395200B8BB21 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3B0A402B2F395200B8BB21 /* ContentView.swift */; };
+		EA3B0A432B2F397600B8BB21 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3B0A422B2F397600B8BB21 /* CameraView.swift */; };
+		EA3B0A452B2F3C8000B8BB21 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3B0A442B2F3C8000B8BB21 /* ImagePicker.swift */; };
+		EA3B0A482B30483300B8BB21 /* HexColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3B0A472B30483300B8BB21 /* HexColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		EA3B0A262B2F24EF00B8BB21 /* ObjectRecognition.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ObjectRecognition.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA3B0A292B2F24EF00B8BB21 /* ObjectRecognitionApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectRecognitionApp.swift; sourceTree = "<group>"; };
-		EA3B0A2B2B2F24EF00B8BB21 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		EA3B0A2D2B2F24F100B8BB21 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA3B0A302B2F24F100B8BB21 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EA3B0A372B2F255700B8BB21 /* MobileNetV2.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MobileNetV2.mlmodel; sourceTree = "<group>"; };
+		EA3B0A3A2B2F38D600B8BB21 /* RecognitionResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecognitionResult.swift; sourceTree = "<group>"; };
+		EA3B0A3D2B2F38F300B8BB21 /* RecognitionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecognitionViewModel.swift; sourceTree = "<group>"; };
+		EA3B0A402B2F395200B8BB21 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		EA3B0A422B2F397600B8BB21 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
+		EA3B0A442B2F3C8000B8BB21 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		EA3B0A472B30483300B8BB21 /* HexColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexColor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +63,12 @@
 		EA3B0A282B2F24EF00B8BB21 /* ObjectRecognition */ = {
 			isa = PBXGroup;
 			children = (
+				EA3B0A462B30482700B8BB21 /* Utils */,
+				EA3B0A3F2B2F392C00B8BB21 /* Views */,
+				EA3B0A3C2B2F38E600B8BB21 /* ViewModel */,
+				EA3B0A392B2F38CB00B8BB21 /* Model */,
+				EA3B0A372B2F255700B8BB21 /* MobileNetV2.mlmodel */,
 				EA3B0A292B2F24EF00B8BB21 /* ObjectRecognitionApp.swift */,
-				EA3B0A2B2B2F24EF00B8BB21 /* ContentView.swift */,
 				EA3B0A2D2B2F24F100B8BB21 /* Assets.xcassets */,
 				EA3B0A2F2B2F24F100B8BB21 /* Preview Content */,
 			);
@@ -65,6 +81,40 @@
 				EA3B0A302B2F24F100B8BB21 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		EA3B0A392B2F38CB00B8BB21 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EA3B0A3A2B2F38D600B8BB21 /* RecognitionResult.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EA3B0A3C2B2F38E600B8BB21 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EA3B0A3D2B2F38F300B8BB21 /* RecognitionViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		EA3B0A3F2B2F392C00B8BB21 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EA3B0A402B2F395200B8BB21 /* ContentView.swift */,
+				EA3B0A422B2F397600B8BB21 /* CameraView.swift */,
+				EA3B0A442B2F3C8000B8BB21 /* ImagePicker.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		EA3B0A462B30482700B8BB21 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				EA3B0A472B30483300B8BB21 /* HexColor.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +187,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA3B0A2C2B2F24EF00B8BB21 /* ContentView.swift in Sources */,
+				EA3B0A382B2F255700B8BB21 /* MobileNetV2.mlmodel in Sources */,
+				EA3B0A432B2F397600B8BB21 /* CameraView.swift in Sources */,
+				EA3B0A412B2F395200B8BB21 /* ContentView.swift in Sources */,
+				EA3B0A452B2F3C8000B8BB21 /* ImagePicker.swift in Sources */,
+				EA3B0A3B2B2F38D600B8BB21 /* RecognitionResult.swift in Sources */,
+				EA3B0A482B30483300B8BB21 /* HexColor.swift in Sources */,
 				EA3B0A2A2B2F24EF00B8BB21 /* ObjectRecognitionApp.swift in Sources */,
+				EA3B0A3E2B2F38F300B8BB21 /* RecognitionViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,11 +331,13 @@
 				DEVELOPMENT_TEAM = JB46XZ574F;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Tirar foto";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -304,11 +362,13 @@
 				DEVELOPMENT_TEAM = JB46XZ574F;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Tirar foto";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
