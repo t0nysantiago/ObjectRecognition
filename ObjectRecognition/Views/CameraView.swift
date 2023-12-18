@@ -21,7 +21,7 @@ struct CameraView: View {
                     
                     Spacer()
                     
-                    Text("Object Found! It's: \(viewModel.identifiedObject)")
+                    Text("Object Found! It's: \(viewModel.identifiedObject.identifier)")
                         .foregroundColor(.white)
                         .fontWeight(.bold)
                         .padding(8)
@@ -29,7 +29,7 @@ struct CameraView: View {
                         .cornerRadius(8)
                         .padding(8)
                         .offset(y: -20)
-                        .opacity(viewModel.identifiedObject.isEmpty ? 0 : 1)
+                        .opacity(viewModel.identifiedObject.identifier.isEmpty ? 0 : 1)
                     
                     Image(uiImage: capturedImage)
                         .resizable()

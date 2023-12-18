@@ -10,8 +10,8 @@ import CoreML
 import Vision
 
 class RecognitionViewModel: ObservableObject {
-    @Published var recognizedObject = "Nenhum objeto reconhecido"
-    @Published var identifiedObject = ""
+    @Published var recognizedObject = RecognitionResult(identifier: "Nenhum objeto reconhecido")
+    @Published var identifiedObject = RecognitionResult(identifier: "")
 
     func recognizeObject(image: UIImage?) {
         
@@ -33,8 +33,9 @@ class RecognitionViewModel: ObservableObject {
                 return
             }
             DispatchQueue.main.async {
-                self?.identifiedObject = bestResult.identifier
-                self?.recognizedObject = bestResult.identifier
+                let recognitionResult = RecognitionResult(identifier: bestResult.identifier)
+                self?.identifiedObject = recognitionResult
+                self?.recognizedObject = recognitionResult
                 print("Objeto reconhecido: \(bestResult.identifier)")
             }
         }
@@ -48,8 +49,8 @@ class RecognitionViewModel: ObservableObject {
     }
     
     func clearResults() {
-        recognizedObject = "Nenhum objeto reconhecido"
-        identifiedObject = ""
+        recognizedObject = RecognitionResult(identifier: "Nenhum objeto reconhecido")
+        identifiedObject = RecognitionResult(identifier: "")
     }
 
     private func loadMobileNetV2Model() -> VNCoreMLModel? {
